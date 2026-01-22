@@ -1,0 +1,34 @@
+---
+hero_title: "MATT COMMERCE"
+hero_subtitle: "Luxury Live Music & DJ Services"
+hero_description: "Premium Entertainment for Corporate Events • Weddings • Private Parties"
+
+bio:
+  heading: "About Matt Commerce"
+  paragraph1: "Matt Commerce is a premium entertainment professional specializing in luxury weddings, high-end corporate events, and exclusive private parties throughout Southern California. His unique combination of live acoustic performance and professional DJ services provides seamless entertainment from ceremony to celebration."
+  paragraph2: "A Virginia-born singer/songwriter with classical training in cello and stand-up bass, Matt transitioned to guitar at age twenty and quickly became a full-time professional performer. His career spans performances at prestigious venues and events across California, from intimate beachfront ceremonies in Malibu to corporate galas in Beverly Hills."
+  paragraph3: "Matt's debut release 'Closer Than You Realize' earned critical acclaim, with North County Times praising its 'addictive melodies' and San Diego Troubadour calling it 'one of the most pleasant aural surprises in quite some time.' His voice was voted one of NBC San Diego's 'Top 10 Voices.'"
+  paragraph4: "Throughout his career, Matt has shared the stage with legendary artists including Usher, Sheryl Crow, Natasha Bedingfield, and Stevie Wonder. This experience performing alongside world-class talent translates into polished, professional entertainment for discerning clients seeking excellence for their most important events."
+  service_areas: "Service Areas: Los Angeles, Santa Monica, Beverly Hills, Malibu, Orange County, Santa Barbara, and throughout Southern California. Available for destination events nationwide."
+
+services:
+  - icon: "🎸"
+    title: "Live Acoustic Performance"
+    description: "Sophisticated guitar and vocals for cocktail hours, ceremonies, and intimate gatherings. Perfect for creating elegant ambiance at luxury events."
+  - icon: "🎵"
+    title: "Professional DJ Services"
+    description: "High-energy DJ sets for receptions and corporate celebrations. Seamless transitions from dinner music to dancing, all managed by one professional."
+  - icon: "🎤"
+    title: "MC & Event Coordination"
+    description: "Expert emcee services to guide your event flow. Professional announcements, toasts, and seamless coordination throughout your special occasion."
+
+event_types:
+  - title: "Luxury Weddings"
+    description: "Ceremony music, cocktail hour, dinner sets, and full reception DJ services. One professional managing your entire celebration's soundtrack."
+  - title: "Corporate Events"
+    description: "Product launches, holiday parties, corporate galas, networking events, and executive functions requiring polished, professional entertainment."
+  - title: "Private Celebrations"
+    description: "Milestone birthdays, anniversary parties, engagement celebrations, and intimate gatherings at private estates and exclusive venues."
+  - title: "Proposal Serenades"
+    description: "Create an unforgettable moment with live music for your surprise proposal. Intimate, romantic, and perfectly executed."
+---

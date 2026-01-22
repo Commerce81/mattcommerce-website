@@ -1,0 +1,8 @@
+---
+email: "contact@mattcommerce.com"
+phone: ""
+instagram: "https://www.instagram.com/mattcommerce/"
+youtube: "http://www.youtube.com/mattcommercemusic"
+thebash: "https://www.thebash.com/music/mattcommerce"
+gigsalad: "http://www.gigsalad.com/mattcommerce"
+---

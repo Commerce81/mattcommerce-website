@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background: #ffffff;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 1.2rem 0;
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #666;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-icons a {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+/* Review Banner */
+.review-banner {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 999;
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.review-banner-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    position: relative;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.review-slide.active {
+    opacity: 1;
+}
+
+.review-slide .event-type {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.review-slide .stars {
+    color: #FFD700;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-slide p {
+    font-style: italic;
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.review-slide .reviewer {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.banner-loader,
+.reviews-loader {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 140px;
+    height: 85vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.hero-divider {
+    width: 60px;
+    height: 2px;
+    background: #000000;
+    margin: 2rem auto;
+}
+
+/* Page Header (for Reviews/Media pages) */
+.page-header {
+    margin-top: 140px;
+    padding: 4rem 3rem 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* Sections */
+section {
+    padding: 5rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* Bio Section */
+.bio-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 3rem;
+}
+
+.bio-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1rem;
+    border: 1px solid #e5e5e5;
+}
+
+.bio-text {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #4a4a4a;
+    font-weight: 300;
+}
+
+.bio-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Services Highlight Section */
+.services-highlight {
+    background: #f9f9f9;
+    padding: 5rem 3rem;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Event Types Section */
+.event-types {
+    padding: 5rem 3rem;
+}
+
+.event-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.event-type-card {
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    transition: box-shadow 0.3s;
+}
+
+.event-type-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.event-type-card h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.event-type-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Reviews Page */
+.reviews-page {
+    min-height: 60vh;
+}
+
+.reviews-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.review-card .event-type {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.review-card .stars {
+    color: #FFD700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border: 1px solid #e5e5e5;
+    transition: box-shadow 0.3s;
+}
+
+.review-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.review-card .reviewer {
+    font-weight: 400;
+    color: #000000;
+    font-style: normal;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Media Page */
+.media-page {
+    min-height: 60vh;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-full {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    background: #f5f5f5;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border: 1px solid #e5e5e5;
+}
+
+.gallery-item:hover {
+    opacity: 0.8;
+}
+
+/* Contact Form */
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #2b2b2b;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    background: #f5f5f5;
+    color: #666;
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2b2b2b;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .gallery-full {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1.5rem;
+    }
+
+    .review-banner-content {
+        padding: 0 1.5rem;
+    }
+
+    .review-slide p {
+        font-size: 0.9rem;
+    }
+
+    .review-slide span {
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        margin-top: 140px;
+    }
+
+    .hero h1,
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .bio-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .gallery-full {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-grid-full {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    .page-header {
+        padding: 3rem 1.5rem 2rem;
+    }
+}
