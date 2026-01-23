@@ -96,7 +96,7 @@ nav {
     margin: 0 auto;
     padding: 0 3rem;
     position: relative;
-    min-height: 80px;
+    min-height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +156,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    margin-top: 140px;
+    margin-top: 180px;
     height: 85vh;
     background: #ffffff;
     display: flex;
