@@ -2,7 +2,7 @@
 // GOOGLE SHEETS CONFIGURATION
 // ============================================
 // Replace this with your Google Sheets Web App URL
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyEK-ZirYynIkyfbAz6UaHsp2L60DzrfNTXMDMPKLGgUWhui2ge2E6g6sRwKopvDEg/exec';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxve9pEh9V_YRdXDdBjS4EXON5yWpWe26uUWLZ8WGHAws3oBT9ZiQuwkX4oGQdEbK4/exec';
 
 // ============================================
 // REVIEW BANNER - Auto-rotating reviews
