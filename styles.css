@@ -92,7 +92,7 @@ nav {
 }
 
 .review-banner-content {
-    max-width: 1400px;
+    max-width: 1350px;
     margin: 0 auto;
     padding: 0 8rem;
     position: relative;
@@ -561,11 +561,11 @@ footer {
     }
 
     .review-banner-content {
-        padding: 0 2rem;
+        padding: 0 8rem;
     }
 
     .review-slide p {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 
     .review-slide span {
