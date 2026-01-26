@@ -73,7 +73,14 @@ nav {
     opacity: 0.7;
     transition: opacity 0.3s;
 }
+.social-icons a i {
+    font-size: 18px;
+    color: #2b2b2b;
+}
 
+.social-icons a:hover i {
+    color: #667eea;
+}
 .social-icons a:hover {
     opacity: 1;
 }
@@ -288,6 +295,11 @@ section h2 {
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    color: #667eea;
+}
+
+.service-icon i {
+    display: block;
 }
 
 .service-card h3 {
