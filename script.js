@@ -141,14 +141,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 // CONTACT FORM
 // ============================================
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thanks for your message! This form needs to be connected to a backend service like Formspree or EmailJS.');
-        // To connect: Use Formspree (https://formspree.io) or EmailJS (https://www.emailjs.com)
-    });
-}
+
 
 // ============================================
 // MOBILE MENU
