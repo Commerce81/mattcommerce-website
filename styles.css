@@ -580,29 +580,38 @@ footer {
         display: none;
     }
 
-    .review-banner-content {
-        padding: 0 1.5rem;
-    }
-
-    .review-slide p {
-        font-size: 0.9rem;
-    }
-
-    .review-slide span {
-        font-size: 0.75rem;
-    }
-
     .hero {
-        margin-top: 70px;  /* ← Back to original since no banner */
+        margin-top: 70px;
     }
 
     .page-header {
-        margin-top: 70px;  /* ← Also adjust page headers */
+        margin-top: 70px;
     }
+
+    .hero h1,
+    .page-header h1 {
+        font-size: 2.5rem;
     }
 
     .hero h2 {
         font-size: 1.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .event-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
     }
 
     .nav-links {
