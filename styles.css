@@ -570,15 +570,15 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     nav {
         padding: 0 1.5rem;
     }
 
     /* Hide review banner on mobile */
     .review-banner {
-        display: none;
-    }
+    display: none !important;
+}
 
     .hero {
         margin-top: 70px;
