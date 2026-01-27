@@ -141,7 +141,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 // CONTACT FORM
 // ============================================
-
+// Contact Form with Custom Thank You
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'SENDING...';
+        submitBtn.disabled = true;
+        
+        // Submit to Formspree
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Show custom success message
+                contactForm.innerHTML = `
+                    <div style="text-align: center; padding: 3rem 2rem;">
+                        <div style="font-size: 4rem; color: #667eea; margin-bottom: 1.5rem;">✓</div>
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #000;">Thank You!</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 1rem;">
+                            I've received your inquiry and truly appreciate you reaching out.
+                        </p>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 1rem;">
+                            I'll review your event details and get back to you within 24 hours to discuss how we can make your special occasion unforgettable.
+                        </p>
+                        <p style="font-size: 1rem; color: #666; margin-top: 2rem;">
+                            In the meantime, feel free to check out my <a href="media.html" style="color: #667eea;">videos and photos</a> or read some <a href="reviews.html" style="color: #667eea;">client reviews</a>.
+                        </p>
+                        <a href="index.html" style="display: inline-block; margin-top: 2rem; padding: 1rem 3rem; background: #000; color: white; text-decoration: none; border-radius: 5px;">BACK TO HOME</a>
+                    </div>
+                `;
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Show error message
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            alert('Oops! There was a problem submitting your form. Please try again or email me directly.');
+        }
+    });
+}
 
 // ============================================
 // MOBILE MENU
