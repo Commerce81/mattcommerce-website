@@ -259,6 +259,9 @@ section h2 {
     color: #999;
     font-size: 1rem;
     border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .bio-text {
