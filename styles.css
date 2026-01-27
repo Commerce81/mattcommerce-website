@@ -581,11 +581,11 @@ footer {
 }
 
     .hero {
-        margin-top: 70px;
+        margin-top: 70px !important;
     }
-
+    
     .page-header {
-        margin-top: 70px;
+        margin-top: 70px !important;
     }
 
     .hero h1,
