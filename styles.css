@@ -577,12 +577,12 @@ footer {
     }
     
     .hero {
-        margin-top: 70px !important;
+        margin-top: 65px !important;
     }
     
     .page-header {
-        margin-top: 75px !important;
-        padding-top: 1.5rem !important;
+        margin-top: 70px !important;
+        padding-top: 1rem !important;
     }
 }
 
@@ -590,48 +590,59 @@ footer {
     nav {
         padding: 0 1.5rem;
     }
-
+    
     .hero {
         height: auto;
-        min-height: 60vh;
-        padding: 2rem 1rem;
+        min-height: 50vh;  /* Reduced from 60vh */
+        padding: 1.5rem 1rem;  /* Reduced from 2rem */
     }
-
+    
     .hero h1,
     .page-header h1 {
         font-size: 2.5rem;
+        margin-bottom: 0.75rem;  /* Added - reduces space after title */
     }
-
+    
     .hero h2 {
         font-size: 1.2rem;
+        margin-bottom: 0.5rem;  /* Added - tighter spacing */
     }
-
+    
     .hero-subtitle {
         font-size: 0.95rem;
     }
-
-    .services-highlight {
-        padding: 3rem 1.5rem;
+    
+    .hero-divider {
+        margin: 1rem auto;  /* Added - reduces divider spacing */
     }
-
+    
+    .services-highlight {
+        padding: 2rem 1.5rem;  /* Reduced from 3rem */
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;  /* Reduced from 2rem */
     }
-
+    
     .event-types {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.5rem;  /* Reduced from 2rem */
     }
-
+    
     .event-types-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;  /* Reduced from 1.5rem */
     }
-
+    
+    .bio-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;  /* Reduced from 2rem */
+    }
+    
     .form-row {
         grid-template-columns: 1fr;
     }
-
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -643,33 +654,32 @@ footer {
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
+    
     .nav-links.active {
         display: flex;
     }
-
+    
     .mobile-menu-btn {
         display: block;
     }
-
-    .bio-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
+    
     .gallery-full {
         grid-template-columns: 1fr;
     }
-
+    
     .reviews-grid-full {
         grid-template-columns: 1fr;
     }
-
+    
     section {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.5rem;  /* Reduced from 2rem */
     }
-
+    
     .page-header {
-        padding: 2rem 1.5rem 1.5rem;
+        padding: 1.5rem 1.5rem 1rem;  /* Reduced from 2rem */
+    }
+    
+    section h2 {
+        margin-bottom: 2rem;  /* Added - reduces space after section headings */
     }
 }
