@@ -570,22 +570,31 @@ footer {
     }
 }
 
+@media (max-width: 992px) {
+    /* Force hide banner on all mobile/tablet */
+    .review-banner {
+        display: none !important;
+    }
+    
+    .hero {
+        margin-top: 70px !important;
+    }
+    
+    .page-header {
+        margin-top: 75px !important;
+        padding-top: 1.5rem !important;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         padding: 0 1.5rem;
     }
 
-    /* Hide review banner on mobile */
-    .review-banner {
-    display: none !important;
-}
-
     .hero {
-        margin-top: 60px !important;
-    }
-    
-    .page-header {
-        margin-top: 60px !important;
+        height: auto;
+        min-height: 60vh;
+        padding: 2rem 1rem;
     }
 
     .hero h1,
@@ -601,13 +610,22 @@ footer {
         font-size: 0.95rem;
     }
 
+    .services-highlight {
+        padding: 3rem 1.5rem;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
+    .event-types {
+        padding: 2rem 1.5rem;
+    }
+
     .event-types-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .form-row {
@@ -648,10 +666,10 @@ footer {
     }
 
     section {
-        padding: 3rem 1.5rem;
+        padding: 2rem 1.5rem;
     }
 
     .page-header {
-        padding: 3rem 1.5rem 2rem;
+        padding: 2rem 1.5rem 1.5rem;
     }
 }
