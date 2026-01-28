@@ -617,7 +617,10 @@ footer {
     }
     
     .services-highlight {
-        padding: 2rem 1.5rem;  /* Reduced from 3rem */
+        padding: 1.5rem 1.5rem;  /* Reduced from 3rem */
+    }
+        .services-highlight h2 {
+        display: none;  /* ← Hide "Premium Entertainment Services" heading */
     }
     
     .services-grid {
