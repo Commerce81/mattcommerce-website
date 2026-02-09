@@ -103,7 +103,7 @@ nav {
     margin: 0 auto;
     padding: 0 12rem;
     position: relative;
-    min-height: 80px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +125,12 @@ nav {
 }
 
 .review-slide .event-type {
-    display: none;
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
 
 .review-slide .stars {
