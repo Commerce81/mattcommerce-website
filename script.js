@@ -5,11 +5,32 @@
 const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxve9pEh9V_YRdXDdBjS4EXON5yWpWe26uUWLZ8WGHAws3oBT9ZiQuwkX4oGQdEbK4/exec';
 
 // ============================================
-// REVIEW BANNER - Auto-rotating reviews
+// REVIEW BANNER - Auto-rotating reviews with persistence
 // ============================================
 let bannerReviews = [];
 let currentBannerSlide = 0;
 let bannerInterval;
+
+// Get saved banner state from localStorage
+function getBannerState() {
+    const saved = localStorage.getItem('reviewBannerState');
+    if (saved) {
+        const state = JSON.parse(saved);
+        // Check if state is less than 1 hour old
+        if (Date.now() - state.timestamp < 3600000) {
+            return state;
+        }
+    }
+    return null;
+}
+
+// Save banner state to localStorage
+function saveBannerState(index) {
+    localStorage.setItem('reviewBannerState', JSON.stringify({
+        index: index,
+        timestamp: Date.now()
+    }));
+}
 
 async function loadBannerReviews() {
     try {
@@ -18,6 +39,13 @@ async function loadBannerReviews() {
         
         if (data && data.reviews && data.reviews.length > 0) {
             bannerReviews = data.reviews;
+            
+            // Check for saved state
+            const savedState = getBannerState();
+            if (savedState && savedState.index < bannerReviews.length) {
+                currentBannerSlide = savedState.index;
+            }
+            
             displayBannerReviews();
             startBannerRotation();
         }
@@ -51,6 +79,13 @@ function useFallbackBannerReviews() {
             reviewer: 'Mauricio - Santa Monica, CA'
         }
     ];
+    
+    // Check for saved state
+    const savedState = getBannerState();
+    if (savedState && savedState.index < bannerReviews.length) {
+        currentBannerSlide = savedState.index;
+    }
+    
     displayBannerReviews();
     startBannerRotation();
 }
@@ -61,7 +96,7 @@ function displayBannerReviews() {
     
     bannerReviews.forEach((review, index) => {
         const slide = document.createElement('div');
-        slide.className = `review-slide ${index === 0 ? 'active' : ''}`;
+        slide.className = `review-slide ${index === currentBannerSlide ? 'active' : ''}`;
         slide.innerHTML = `
             <div class="event-type">${review.eventType || ''}</div>
             <div class="stars">★★★★★</div>
@@ -80,6 +115,9 @@ function startBannerRotation() {
         slides[currentBannerSlide].classList.remove('active');
         currentBannerSlide = (currentBannerSlide + 1) % slides.length;
         slides[currentBannerSlide].classList.add('active');
+        
+        // Save state after each rotation
+        saveBannerState(currentBannerSlide);
     }, 10000); // Rotate every 10 seconds
 }
 
