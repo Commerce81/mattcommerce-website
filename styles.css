@@ -94,7 +94,7 @@ nav {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     z-index: 999;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     overflow: hidden;
 }
 
@@ -103,7 +103,7 @@ nav {
     margin: 0 auto;
     padding: 0 12rem;
     position: relative;
-    min-height: 160px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,25 +125,18 @@ nav {
 }
 
 .review-slide .event-type {
-    font-size: 0.75rem;
-    color: #999;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    display: none;
 }
 
 .review-slide .stars {
-    color: #FFD700;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    display: none;
 }
 
 .review-slide p {
     font-style: italic;
     color: #4a4a4a;
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     font-weight: 300;
     line-height: 1.5;
 }
